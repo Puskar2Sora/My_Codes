@@ -1,0 +1,5 @@
+x=input("Enter 1st string=")
+y=input("Enter 2nd string=")
+z=(x,y)
+p=' '.join(z)
+print(p)

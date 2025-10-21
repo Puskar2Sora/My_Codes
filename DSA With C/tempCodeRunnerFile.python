@@ -1,0 +1,87 @@
+import pygame
+import random
+import sys
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the display
+screen_width = 600
+screen_height = 400
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption('Catch the Falling Objects')
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+
+# Game variables
+basket_width = 100
+basket_height = 20
+basket_x = screen_width // 2 - basket_width // 2
+basket_y = screen_height - basket_height - 10
+basket_speed = 7
+
+fruit_width = 30
+fruit_height = 30
+fruit_x = random.randint(0, screen_width - fruit_width)
+fruit_y = -fruit_height
+fruit_speed = 5
+
+score = 0
+
+# Fonts
+font = pygame.font.SysFont(None, 36)
+
+# Game loop
+running = True
+while running:
+    screen.fill(WHITE)
+    
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Get pressed keys
+    keys = pygame.key.get_pressed()
+    
+    # Move the basket
+    if keys[pygame.K_LEFT] and basket_x > 0:
+        basket_x -= basket_speed
+    if keys[pygame.K_RIGHT] and basket_x < screen_width - basket_width:
+        basket_x += basket_speed
+
+    # Move the falling fruit
+    fruit_y += fruit_speed
+    if fruit_y > screen_height:
+        fruit_x = random.randint(0, screen_width - fruit_width)
+        fruit_y = -fruit_height
+
+    # Collision detection
+    if (basket_x < fruit_x + fruit_width and
+        basket_x + basket_width > fruit_x and
+        basket_y < fruit_y + fruit_height and
+        basket_y + basket_height > fruit_y):
+        score += 1
+        fruit_x = random.randint(0, screen_width - fruit_width)
+        fruit_y = -fruit_height
+
+    # Draw objects
+    pygame.draw.rect(screen, RED, (basket_x, basket_y, basket_width, basket_height))
+    pygame.draw.rect(screen, (0, 255, 0), (fruit_x, fruit_y, fruit_width, fruit_height))
+
+    # Display the score
+    score_text = font.render(f'Score: {score}', True, BLACK)
+    screen.blit(score_text, (10, 10))
+
+    # Update the display
+    pygame.display.update()
+
+    # Frame rate
+    pygame.time.Clock().tick(60)
+
+# Quit Pygame
+pygame.quit()
+sys.exit()

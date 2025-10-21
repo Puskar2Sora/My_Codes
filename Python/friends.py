@@ -1,0 +1,1 @@
+n=(input("Enter the name your favourite Friend="))

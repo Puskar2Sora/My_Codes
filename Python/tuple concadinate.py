@@ -1,0 +1,6 @@
+x=input("Enter the 1st tupple=")
+t1=tuple(x.split(','))
+y=input("Enter the2nd tupple=")
+t2=tuple(y.split(','))
+t3=(t1,)+(t2,)
+print(t3)
