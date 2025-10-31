@@ -1,7 +1,7 @@
 //POLYNOMIAL ADDITION(PERFECT CODE, SORTED) Renewed
 #include <stdio.h>
 #include <stdlib.h>
-typedef struct link 
+typedef struct link
 {
     int coeff, pow;
     struct link *next;
@@ -11,8 +11,6 @@ void my_create_poly(p **node);
 void my_show_poly(p *node);
 void my_add_poly(p **result, p *poly1, p *poly2);
 void my_poly_add_ordered_term(p **poly, int coeff, int pow);
-
-
 
 void my_poly_add_ordered_term(p **poly, int coeff, int pow) 
 {
