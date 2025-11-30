@@ -13,8 +13,7 @@ class Heap
             a[i]=ob.nextInt();
         }
         sorttt(a,n);
-        for(int i =0;i<n;i++)
-              System.out.print(" "+a[i]);    
+        for(int i:a) System.out.print(i+" ");   
     }
     public static void sorttt(int a[] , int n)
     {
