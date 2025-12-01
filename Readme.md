@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Welcome+to+My+Coding+Vault+💻;Java+%7C+C+%7C+Python+%7C+DSA;Every+Code+I+Write+Lives+Here+🚀;"> 
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=স্মৃতি+এসে+রোজ+দরজাতে...;কড়া+নাড়ে,+আর+হাত+পাতে,;আর+ভেঙে+পড়ে+কান্নাতে।;Java+%7C+C+%7C+Python+%7C+DSA;Every+Code+I+Write+Lives+Here+🚀;"> 
 </p>
 <p align="center"> 
   <a><img src="https://img.shields.io/github/repo-size/Puskar2Sora/My_Codes?color=brightgreen&style=for-the-badge"></a>
