@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/My_code/Codes/CP [GFG ,Haccaker Rank, LeetCode]/GFG",
-      "program": "e:/My_code/Codes/CP [GFG ,Haccaker Rank, LeetCode]/GFG/build/Debug/outDebug",
+      "cwd": "e:/My_code/Codes/CP [GFG ]/POTD",
+      "program": "e:/My_code/Codes/CP [GFG ]/POTD/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
