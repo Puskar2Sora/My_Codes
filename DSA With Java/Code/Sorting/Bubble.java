@@ -18,7 +18,7 @@ class Bubble
             {            
             for(int j=0; j<n-i-1; j++) 
                 {      
-                if(a[j] > a[j+1])
+                if(a[j] < a[j+1])
                 {
                     int temp = a[j];
                     a[j] = a[j+1];
@@ -27,5 +27,6 @@ class Bubble
             }
         }
         for(int i:a) System.out.print(i+" ");
+        System.out.println(""+(a[0]+a[1]));
     }
 }
