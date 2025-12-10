@@ -23,9 +23,7 @@ This is my complete coding journey archive, where I store:
 🔹 Python Scripts  
 🔹 Logic Building Programs  
 
-> **A Nerve Ending Story.......
->    Make believe everything ..** 🚀
-
+> **A Nerve Ending Story.......** 
 ---
 ### 🗂 Automatic Index Style Summary
 
