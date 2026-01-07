@@ -23,8 +23,8 @@ This is my complete coding journey archive, where I store:
 🔹 Python Scripts  
 🔹 Logic Building Programs  
 
-> **If I code it — I Just Kill it by this.....  
-This repo grows forever.** 🚀
+> **Main Rahoon ya na Rahoon
+Tum Mujhme Kain Baki Rekhna** 
 
 ---
 
