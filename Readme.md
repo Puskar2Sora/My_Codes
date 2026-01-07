@@ -27,6 +27,21 @@ This is my complete coding journey archive, where I store:
 This repo grows forever.** 🚀
 
 ---
+
+
+## 🏷️ Tech Stack & Tags
+
+<p>
+  <img src="https://img.shields.io/badge/PYTHON-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/JAVA-yellow?style=flat-square"/>
+  <img src="https://img.shields.io/badge/C-lightgrey?style=flat-square"/>
+  <img src="https://img.shields.io/badge/C++-blueviolet?style=flat-square"/>
+  <img src="https://img.shields.io/badge/DSA With C-success?style=flat-square"/>
+  <img src="https://img.shields.io/badge/DSA With Java-blue?style=flat-square"/>
+</p>
+
+---
+
 ### 🗂 Automatic Index Style Summary
 
 | Folder          | Contents |
