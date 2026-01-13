@@ -50,6 +50,7 @@ Tum Mujhme Kain Baki Rekhna**
 | **JAVA**         | Patterns, OOP, Arrays, Basic logic |
 | **C Programms**  | C logic problems |
 | **DSA With C**   | Data structures implemented in C |
+| **Daily**       | Problem Solving |
 | **Python**       | Practice scripts |
 
 ---
