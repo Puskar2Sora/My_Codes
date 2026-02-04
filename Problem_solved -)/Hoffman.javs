@@ -1,0 +1,108 @@
+import java.util.*;
+
+// Node class for Huffman Tree
+class Node {
+    char ch;
+    int freq;
+    Node left, right;
+
+    Node(char ch, int freq) {
+        this.ch = ch;
+        this.freq = freq;
+        left = right = null;
+    }
+}
+
+// Comparator for Priority Queue (Min Heap)
+class HuffmanComparator implements Comparator<Node> {
+    public int compare(Node a, Node b) {
+        return a.freq - b.freq;
+    }
+}
+
+public class HuffmanCoding {
+
+    // Generate Huffman Codes
+    public static void generateCodes(Node root, String code, Map<Character, String> huffmanCode) {
+        if (root == null)
+            return;
+
+        if (root.left == null && root.right == null) {
+            huffmanCode.put(root.ch, code);
+        }
+
+        generateCodes(root.left, code + "0", huffmanCode);
+        generateCodes(root.right, code + "1", huffmanCode);
+    }
+
+    // Build Huffman Tree
+    public static Node buildHuffmanTree(String text) {
+        Map<Character, Integer> freqMap = new HashMap<>();
+
+        for (char ch : text.toCharArray()) {
+            freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
+        }
+
+        PriorityQueue<Node> pq = new PriorityQueue<>(new HuffmanComparator());
+
+        for (Map.Entry<Character, Integer> entry : freqMap.entrySet()) {
+            pq.add(new Node(entry.getKey(), entry.getValue()));
+        }
+
+        while (pq.size() > 1) {
+            Node left = pq.poll();
+            Node right = pq.poll();
+
+            Node merged = new Node('\0', left.freq + right.freq);
+            merged.left = left;
+            merged.right = right;
+
+            pq.add(merged);
+        }
+
+        return pq.poll();
+    }
+
+    // Encode the text
+    public static String encode(String text, Map<Character, String> huffmanCode) {
+        StringBuilder encoded = new StringBuilder();
+        for (char ch : text.toCharArray()) {
+            encoded.append(huffmanCode.get(ch));
+        }
+        return encoded.toString();
+    }
+
+    // Decode the encoded text
+    public static String decode(String encodedText, Node root) {
+        StringBuilder decoded = new StringBuilder();
+        Node current = root;
+
+        for (char bit : encodedText.toCharArray()) {
+            current = (bit == '0') ? current.left : current.right;
+
+            if (current.left == null && current.right == null) {
+                decoded.append(current.ch);
+                current = root;
+            }
+        }
+        return decoded.toString();
+    }
+
+    // Driver Code
+    public static void main(String[] args) {
+        String text = "huffman coding in java";
+
+        Node root = buildHuffmanTree(text);
+
+        Map<Character, String> huffmanCode = new HashMap<>();
+        generateCodes(root, "", huffmanCode);
+
+        String encodedText = encode(text, huffmanCode);
+        String decodedText = decode(encodedText, root);
+
+        System.out.println("Original Text: " + text);
+        System.out.println("Huffman Codes: " + huffmanCode);
+        System.out.println("Encoded Text: " + encodedText);
+        System.out.println("Decoded Text: " + decodedText);
+    }
+}
