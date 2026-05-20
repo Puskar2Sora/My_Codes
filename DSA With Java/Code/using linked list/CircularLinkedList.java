@@ -13,6 +13,8 @@ public class CircularLinkedList {
     private Node tail = null;
 
     public void createList() {
+
+        
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of nodes: ");
         int n = sc.nextInt();
