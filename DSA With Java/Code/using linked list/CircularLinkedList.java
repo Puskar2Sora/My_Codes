@@ -2,7 +2,6 @@ import java.util.Scanner;
 class Node {
     int data;
     Node next;
-
     Node(int data) {
         this.data = data;
         this.next = null;
@@ -11,14 +10,10 @@ class Node {
 public class CircularLinkedList {
     private Node head = null;
     private Node tail = null;
-
     public void createList() {
-
-        
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of nodes: ");
         int n = sc.nextInt();
-
         for (int i = 1; i <= n; i++) {
             System.out.print("Enter data for node " + i + ": ");
             int data = sc.nextInt();
@@ -69,14 +64,11 @@ public class CircularLinkedList {
             System.out.println("Invalid position!");
             return;
         }
-
         Node newNode = new Node(data);
-
         if (pos == 1) {
             insertAtBeginning(data);
             return;
         }
-
         Node temp = head;
         int count = 1;
         while (count < pos - 1 && temp.next != head) {
@@ -94,7 +86,6 @@ public class CircularLinkedList {
             System.out.println("List is empty. Nothing to delete.");
             return;
         }
-
         if (head == tail) {
             head = tail = null;
         } else {
@@ -108,7 +99,6 @@ public class CircularLinkedList {
             System.out.println("List is empty. Nothing to delete.");
             return;
         }
-
         if (head == tail) {
             head = tail = null;
         } else {
@@ -126,38 +116,29 @@ public class CircularLinkedList {
             System.out.println("List is empty. Nothing to delete.");
             return;
         }
-
         if (pos <= 0) {
             System.out.println("Invalid position!");
             return;
         }
-
         if (pos == 1) {
             deleteAtBeginning();
             return;
         }
-
         Node temp = head;
         Node prev = null;
         int count = 1;
-
         while (count < pos && temp.next != head) {
             prev = temp;
             temp = temp.next;
             count++;
         }
-
         if (count != pos) {
             System.out.println("Position out of range!");
             return;
         }
-
         prev.next = temp.next;
-
-        if (temp == tail) {
+        if (temp == tail) 
             tail = prev;
-        }
-
         System.out.println("Node deleted from position " + pos + ".");
     }
     public void search(int key) {
@@ -165,7 +146,6 @@ public class CircularLinkedList {
             System.out.println("List is empty.");
             return;
         }
-
         Node temp = head;
         int pos = 1;
         do {
@@ -176,14 +156,12 @@ public class CircularLinkedList {
             temp = temp.next;
             pos++;
         } while (temp != head);
-
         System.out.println("Element " + key + " not found in the list.");
     }
     public static void main(String[] args) {
         CircularLinkedList list = new CircularLinkedList();
         Scanner sc = new Scanner(System.in);
         int choice, data, pos;
-
         do {
             System.out.println("\n====== Circular Linked List Menu ======");
             System.out.println("\t1. Create List");
@@ -198,7 +176,6 @@ public class CircularLinkedList {
             System.out.println("\t10. Exit");
             System.out.print("\tEnter your choice: ");
             choice = sc.nextInt();
-
             switch (choice) {
                 case 1:
                     list.createList();
