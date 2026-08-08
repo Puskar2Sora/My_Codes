@@ -7,9 +7,7 @@ class Solution {
         s[0] = 1;  
         int[] l = new int[26];
         Arrays.fill(l, -1);
-        
         for (int i = 1; i <=str.length(); i++) {
-           
             int ch = str.charAt(i - 1) - 'a';
             s[i] = (2 * s[i - 1]) % mod;
             if (l[ch] != -1)
