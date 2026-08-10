@@ -13,6 +13,8 @@
 <a><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"></a>
 </p>
 
+
+
 ## 📌 About This Repository
 
 This is my complete coding journey archive, where I store:
@@ -27,6 +29,8 @@ This is my complete coding journey archive, where I store:
 Tum Mujhme Kain Baki Rekhna** 
 
 ---
+
+
 
 
 ## 🏷️ Tech Stack & Tags
@@ -50,6 +54,7 @@ Tum Mujhme Kain Baki Rekhna**
 | **JAVA**         | Patterns, OOP, Arrays, Basic logic |
 | **C Programms**  | C logic problems |
 | **DSA With C**   | Data structures implemented in C |
+| **Daily**       | Problem Solving |
 | **Python**       | Practice scripts |
 
 ---

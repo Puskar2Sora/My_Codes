@@ -3,6 +3,8 @@ class Node {
     int data;
     Node next;
 
+    
+
     Node(int data) {
         this.data = data;
         this.next = null;
@@ -44,6 +46,8 @@ class SinglyLinkedList {
         }
         temp.next = newNode;
     }
+
+    
     public void insertAtSpecific(int data, int pos) {
         if (pos <= 0) {
             System.out.println("Invalid position.");
