@@ -1,7 +1,7 @@
 import java.util.*;
 class Buffer1
 {
-  public static void main(String as[])
+public static void main(String as[])
   {
     Scanner ob=new Scanner(System.in);
     System.out.print("Enter the String=");
