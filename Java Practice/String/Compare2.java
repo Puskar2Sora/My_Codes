@@ -10,7 +10,7 @@ class Compare2
         System.out.print("Enter the 2nd String=");
         y=la.nextLine();
         if(x.equalsIgnoreCase(y))
-                    System.out.print("String Matched");
+            System.out.print("String Matched");
         else
             System.out.print("String Not matched");
         la.close();
