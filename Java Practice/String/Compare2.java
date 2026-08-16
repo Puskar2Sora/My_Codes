@@ -12,7 +12,7 @@ class Compare2
         if(x.equalsIgnoreCase(y))
                     System.out.print("String Matched");
         else
-                    System.out.print("String Not matched");
+            System.out.print("String Not matched");
         la.close();
     }
 }
