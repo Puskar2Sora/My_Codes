@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 class Node {
     char ch;
     int freq;
