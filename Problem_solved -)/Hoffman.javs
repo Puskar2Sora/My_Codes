@@ -1,6 +1,6 @@
 import java.util.*;
 
-// Node class for Huffman Tree
+
 class Node {
     char ch;
     int freq;
